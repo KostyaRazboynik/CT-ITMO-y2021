@@ -1,0 +1,19 @@
+package expression.exceptions;
+
+import expression.ExpressionFunc;
+
+public class CheckedSubtract extends BinaryOperation {
+
+    public CheckedSubtract(ExpressionFunc first, ExpressionFunc second) {
+        super(first, second, "-");
+    }
+
+    @Override
+    public int completeFun(int x, int y)  {
+        if ((x > 0 && y < x - Integer.MAX_VALUE) || (x < 0 && y > x - Integer.MIN_VALUE) || (x == 0 && y == Integer.MIN_VALUE)) {
+            throw new OverflowException(x, y, "-");
+        }
+
+        return x - y;
+    }
+}
