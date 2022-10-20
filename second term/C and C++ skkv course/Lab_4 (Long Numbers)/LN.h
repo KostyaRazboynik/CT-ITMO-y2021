@@ -17,7 +17,7 @@ class LN
 	LN(const char *);
 	LN(std::string_view);
 
-	LN &operator=(const LN &);
+	void operator=(const LN &);
 	void operator=(LN &&);
 
 	operator bool() const;

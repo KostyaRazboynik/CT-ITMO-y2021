@@ -25,7 +25,7 @@ LN::LN(const LN &a)
 }
 
 /// оператор копирвоания
-LN LN::operator=(const LN &a)
+void LN::operator=(const LN &a)
 {
 	this->m_NaN = a.m_NaN;
 	this->m_neg = a.m_neg;
