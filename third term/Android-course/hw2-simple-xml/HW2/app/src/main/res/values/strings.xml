@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HW2</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="logIn">LOG IN</string>
+    <string name="inc">Incorrect login or password</string>
+    <string name="noLog">No login</string>
+    <string name="noPass">No password</string>
+    <string name="eye">👁</string>
+    <string name="noLogNoPass">No login and password</string>
+</resources>

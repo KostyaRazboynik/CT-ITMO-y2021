@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HW4</string>
+    <string name="message">Message</string>
+    <string name="user_name">User name</string>
+    <string name="time">time</string>
+    <string name="image_message">image Message</string>
+    <string name="error">Server error</string>
+</resources>

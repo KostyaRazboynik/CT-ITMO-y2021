@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AndrewDownAnimation">
+        <attr name="compressImageCoefficientDown" format="float"/>
+        <attr name="downStart" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="AndrewUpAnimation">
+        <attr name="compressImageCoefficientUp" format="float"/>
+        <attr name="upStart" format="float"/>
+    </declare-styleable>
+</resources>
