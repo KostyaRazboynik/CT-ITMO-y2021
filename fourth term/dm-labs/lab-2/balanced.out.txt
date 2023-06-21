@@ -1,0 +1,22 @@
+start: s
+accept: ac
+reject: rj
+blank: _
+ 
+ 
+s ( -> go ( >
+s _ -> ac _ ^
+ 
+go ( -> go ( >
+go ) -> delL ) <
+go 1 -> go 1 >
+go _ -> return _ <
+ 
+delL ( -> delR 1 >
+delL 1 -> delL 1 <
+ 
+delR ) -> go 1 >
+delR 1 -> delR 1 >
+ 
+return 1 -> return _ <
+return _ -> ac _ ^

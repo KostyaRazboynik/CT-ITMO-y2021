@@ -1,0 +1,67 @@
+start: s
+accept: ac
+reject: rj
+blank: _
+ 
+ 
+s 1 -> c1te 1 >
+s 0 -> c0te 0 >
+ 
+c1te 0 -> c1te 0 >
+c1te 1 -> c1te 1 >
+c1te _ -> cr1 _ <
+c1te i -> cr1 i <
+c1te o -> cr1 o <
+ 
+cr1 1 -> c1ts i <
+cr1 0 -> c0ts i <
+cr1 o -> changeR o ^
+cr1 i -> changeR i ^
+ 
+c1ts 0 -> c1ts 0 <
+c1ts 1 -> c1ts 1 <
+c1ts _ -> cl1 _ >
+c1ts i -> cl1 i >
+c1ts o -> cl1 o >
+ 
+c0ts 0 -> c0ts 0 <
+c0ts 1 -> c0ts 1 <
+c0ts _ -> cl0 _ >
+c0ts i -> cl0 i >
+c0ts o -> cl0 o >
+ 
+cl1 1 -> sCPY i >
+cl1 0 -> sCPY i >
+cl1 o -> changeR o ^
+cl1 i -> changeR i ^
+ 
+cl0 1 -> sCPY o >
+cl0 0 -> sCPY o >
+cl0 o -> changeR o ^
+cl0 i -> changeR i ^
+ 
+c0te 0 -> c0te 0 >
+c0te 1 -> c0te 1 >
+c0te _ -> cr0 _ <
+c0te i -> cr0 i <
+c0te o -> cr0 o <
+ 
+cr0 1 -> c1ts o <
+cr0 0 -> c0ts o <
+cr0 o -> changeR o ^
+cr0 i -> changeR i ^
+ 
+sCPY 1 -> c1te 1 >
+sCPY 0 -> c0te 0 >
+sCPY i -> changeR i ^
+sCPY o -> changeR o ^
+ 
+changeR i -> changeR 1 >
+changeR o -> changeR 0 >
+changeR _ -> changeL _ <
+ 
+changeL i -> changeL 1 <
+changeL o -> changeL 0 <
+changeL 1 -> changeL 1 <
+changeL 0 -> changeL 0 <
+changeL _ -> ac _ >

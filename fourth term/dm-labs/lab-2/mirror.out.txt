@@ -1,0 +1,33 @@
+start: s
+accept: ac
+reject: rj
+blank: _
+ 
+s 1 -> go 1 >
+s 0 -> go 0 >
+ 
+go 0 -> go 0 >
+go 1 -> go 1 >
+go _ -> back _ <
+ 
+back 1 -> change1 i >
+back 0 -> change0 o >
+back i -> back i <
+back o -> back o <
+back _ -> ch _ >
+ 
+change1 i -> change1 i >
+change1 o -> change1 o >
+change1 _ -> back i <
+ 
+change0 i -> change0 i >
+change0 o -> change0 o >
+change0 _ -> back o <
+ 
+ch i -> ch 1 >
+ch o -> ch 0 >
+ch _ -> return _ <
+ 
+return 1 -> return 1 <
+return 0 -> return 0 <
+return _ -> ac _ >
